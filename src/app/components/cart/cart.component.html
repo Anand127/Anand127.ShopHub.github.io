@@ -1,0 +1,22 @@
+<div>
+    <h2>Cart</h2>
+    <div *ngFor="let item of cartItems; let i = index" class="cart-item">
+      <div class="item-details">
+        <p>{{ item.name }} - Price: {{ item.price }}</p>
+        <div class="quantity-controls">
+          <button mat-icon-button (click)="decreaseQuantity(i)">
+            <mat-icon>remove</mat-icon>
+          </button>
+          <span>{{ item.quantity }}</span>
+          <button mat-icon-button (click)="increaseQuantity(i)">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+        <p>Total: {{ item.quantity * item.price }}</p>
+        <button mat-button color="warn" (click)="removeFromCart(i)">Remove</button>
+      </div>
+    </div>
+    <button mat-button (click)="navigateToDashboard()">Continue Shopping</button>
+    <button mat-raised-button color="primary" (click)="placeOrder()">Place Order</button>
+  </div>
+  

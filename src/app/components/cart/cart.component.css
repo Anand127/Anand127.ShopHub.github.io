@@ -1,0 +1,152 @@
+.cart-item .quantity-controls span {
+    font-size: 16px; 
+  }
+
+ 
+.cart-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+ 
+  .cart-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-item img {
+    max-width: 100px;
+    margin-right: 10px;
+  }
+  
+  .item-details {
+    flex-grow: 1;
+  }
+  
+
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-controls button {
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    margin: 0 5px;
+  }
+  
+
+  .cart-total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Style the main cart container */
+div {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the cart title */
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Style each cart item */
+.cart-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the item details */
+.item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Style the item name and price */
+.item-details p {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+}
+
+/* Style the quantity controls */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.quantity-controls button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.quantity-controls button:hover {
+  background: #0056b3;
+}
+
+/* Style the total price */
+.item-details p:last-child {
+  font-weight: bold;
+}
+
+/* Style the "Remove" button */
+button[color="warn"] {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[color="warn"]:hover {
+  background: #c82333;
+}
+
+/* Style the "Continue Shopping" and "Place Order" buttons */
+button[color="primary"] {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[color="primary"]:hover {
+  background: #0056b3;
+}

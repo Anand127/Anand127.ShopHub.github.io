@@ -1,0 +1,171 @@
+{
+  "fields": [
+    {
+      "id": 1,
+      "name": "username",
+      "label": "Username",
+      "type": "text",
+      "validators": [
+        {
+          "type": "required",
+          "message": "Username is required."
+        },
+        {
+          "type": "minlength",
+          "value": 5,
+          "message": "Username must be at least 5 characters long."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "email",
+      "label": "Email",
+      "type": "email",
+      "validators": [
+        {
+          "type": "required",
+          "message": "Email is required."
+        },
+        {
+          "type": "email",
+          "message": "Please enter a valid email address."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "mobileNumber",
+      "label": "Mobile Number",
+      "type": "tel",
+      "validators": [
+        {
+          "type": "required",
+          "message": "Mobile Number is required."
+        },
+        {
+          "type": "pattern",
+          "value": "^[0-9]{10}$",
+          "message": "Please enter a valid 10-digit mobile number."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "password",
+      "label": "Password",
+      "type": "password",
+      "validators": [
+        {
+          "type": "required",
+          "message": "Password is required."
+        },
+        {
+          "type": "minlength",
+          "value": 8,
+          "message": "Password must be at least 8 characters long."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "confirmPassword",
+      "label": "Confirm Password",
+      "type": "password",
+      "validators": [
+        {
+          "type": "required",
+          "message": "Confirm Password is required."
+        },
+        {
+          "type": "match",
+          "field": "password",
+          "message": "Passwords must match."
+        }
+      ]
+    },
+    {
+      "username": "anand",
+      "email": "raj@gmail.com",
+      "mobile": "8478474874",
+      "password": "Anand@123",
+      "confirmPassword": "Anand@123",
+      "showPasswordToggle": false,
+      "id": 6
+    },
+    {
+      "username": "anand",
+      "email": "raj@gmail.com",
+      "mobile": "8478474874",
+      "password": "Anand@321",
+      "confirmPassword": "Anand@321",
+      "showPasswordToggle": false,
+      "id": 7
+    },
+    {
+      "username": "anand",
+      "email": "raj@gmail.com",
+      "mobile": "8478474874",
+      "password": "Rajan@123",
+      "confirmPassword": "Rajan@123",
+      "showPasswordToggle": false,
+      "id": 8
+    },
+    {
+      "username": "Vicky",
+      "email": "raj@gmail.com",
+      "mobile": "8478474874",
+      "password": "Vicky@123",
+      "confirmPassword": "Vicky@123",
+      "showPasswordToggle": false,
+      "id": 9
+    },
+    {
+      "username": "anand",
+      "email": "raj@gmail.com",
+      "mobile": "9850587909",
+      "password": "Rajan@123",
+      "confirmPassword": "Rajan@123",
+      "showPasswordToggle": false,
+      "id": 10
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 13 Pro",
+      "price": 99999,
+      "description": "The most advanced iPhone yet.",
+      "image": "https://www.bing.com/th?id=OIP.-znSix6h7Ou6jOC5TGYxJgHaMJ&w=126&h=208&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
+      "category": "Smartphones",
+      "brand": "Apple"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S22 Ultra",
+      "price": 11999,
+      "description": "The most powerful Android phone on the market.",
+      "image": "data:image/jpeg;base64,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",
+      "category": "Smartphones",
+      "brand": "Samsung"
+    },
+    {
+      "id": 3,
+      "name": "MacBook Pro 14",
+      "price": 19999,
+      "description": "The most powerful MacBook ever.",
+      "image": "https://www.notebookcheck.net/fileadmin/_processed_/c/3/csm_AKA8518_984be0479c.jpg",
+      "category": "Laptops",
+      "brand": "Apple"
+    },
+    {
+      "id": 4,
+      "name": "Dell XPS 13",
+      "price": 40000,
+      "description": "The most popular XPS laptop.",
+      "image": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/Dell-XPS-13-ultrabook.jpg",
+      "category": "Laptops",
+      "brand": "Dell"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+
+  form {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #3498db; /* Blue color for the heading */
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #333; /* Dark gray color for labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+pre {
+    margin: 10px 0;
+}
+
+div.error {
+    color: red;
+    margin-top: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db; /* Blue background color for buttons */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+label[for="showPasswordToggle"] {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Custom styles for the show password toggle */
+input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    color: #3498db; /* Blue color for the checkbox */
+}
+
+/* Style for error messages */
+.error-message {
+  color: #ff0000; /* Red color for error text */
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* Style for the error border on input fields */
+.input-error {
+  border: 1px solid #ff0000; /* Red border for input fields with errors */
+}
+
+/* Style for error messages that are adjacent to input fields */
+.form-group .error-message {
+  display: block;
+  margin-top: 5px;
+}

@@ -1,0 +1,24 @@
+<div class="place-order-container">
+    <h2>Place Order</h2>
+    
+    <div class="delivery-details">
+      <h3>Delivery Information</h3>
+      <p>Deliver to: John Doe</p>
+      <p>No.35 Ritchie Street, NY</p>
+      <!-- Add more delivery-related information here -->
+    </div>
+    
+    <div class="price-details">
+      <h3>Price Details</h3>
+      <div class="item-price" *ngFor="let item of cartItems">
+        <span>{{ item.name }} x {{ item.quantity }}</span>
+        <span>{{ item.totalPrice | currency }}</span>
+      </div>
+    </div>
+    
+    <div class="total-amount">
+      <h3>Total Amount</h3>
+      <p>{{ calculateCartTotal() | currency }}</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,78 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <h1> ShopHub Access Signup</h1>
+    <pre></pre>
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username" required>
+    <!-- <div *ngIf="registrationForm.get('username')?.hasError('required')">
+      {{ registrationForm.get('username')?.getError('required') }}
+      Username is required
+    </div> -->
+    <div *ngIf="registrationForm.get('username')?.touched && registrationForm.get('username')?.hasError('required') " >
+      Username is required
+    </div>
+    <div *ngIf="registrationForm.get('username')?.hasError('hasNumber')">
+      {{ registrationForm.get('username')?.getError('hasNumber') }}
+    </div>
+    <div *ngIf="registrationForm.get('username')?.hasError('minlength')">
+      {{ registrationForm.get('username')?.getError('minlength') }}
+    </div>
+    <br>
+    <pre></pre>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" required>
+    <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched">
+        <div *ngIf="registrationForm.get('email')?.errors?.['required']">Email is required.</div>
+        <!-- <div *ngIf="registrationForm.get('email')?.errors?.['emailValidator']">Invalid email format.</div> -->
+        <div *ngIf="registrationForm.get('email')?.touched && registrationForm.get('email')?.hasError('email')">
+          Invalid email
+        </div>
+    </div>
+      <br>
+    <pre></pre>
+    <label for="mobile">Mobile Number:</label>
+    <input type="text" id="mobile" formControlName="mobile" required>
+    <div *ngIf="registrationForm.get('mobile')?.invalid && registrationForm.get('mobile')?.touched ">
+      <div *ngIf="registrationForm.get('mobile')?.errors?.['required']">
+      Mobile Number is required
+      </div>
+      <div *ngIf="registrationForm.get('mobile')?.hasError('pattern')">
+     Invalid Mobile Number
+      </div>
+    </div>
+    <br>
+    <pre></pre>
+    
+    <label for="password">Password:</label>
+    <input [type]="showPassword ? 'text' : 'password'" id="password" formControlName="password" required>
+    <!-- <div *ngIf="registrationForm.get('password')?.invalid">
+      <div *ngIf="registrationForm.get('password')?.hasError('required') && registrationForm.get('password')?.touched">
+       Password is required
+      </div>
+      <div *ngIf="registrationForm.get('password')?.hasError('invalidPassword')">
+        {{ registrationForm.get('password')?.getError('invalidPassword') }}
+      </div>
+    </div> -->
+    <div *ngIf="registrationForm.get('password')?.hasError('required') && registrationForm.get('password')?.touched">
+      Password is required.
+    </div>
+    <div *ngIf="registrationForm.get('password')?.hasError('invalidPassword')">
+      {{ registrationForm.get('password')?.getError('invalidPassword') }}
+    </div>
+    <pre></pre>
+    <label for="confirmPassword">Confirm Password:</label>
+    <input [type]="showPassword ? 'text' : 'password'" id="confirmPassword" formControlName="confirmPassword" required>
+    <div *ngIf="registrationForm.get('confirmPassword')?.hasError('passwordsNotMatching') && registrationForm.get('confirmPassword')?.dirty">
+        Passwords do not match.
+      </div>
+      <div *ngIf="registrationForm.get('password')?.hasError('required') && registrationForm.get('password')?.touched">
+        Password is required.
+      </div>
+      <div>
+        <label>Show Password</label>
+        <input type="checkbox" formControlName="showPasswordToggle">
+      </div>
+    <br>
+    <pre></pre>
+    <button type="submit" [disabled]="!registrationForm.valid">Register</button>
+  </form>
+  

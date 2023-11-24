@@ -1,0 +1,50 @@
+{
+    "fields": [
+      {
+        "name": "username",
+        "label": "Username",
+        "type": "text",
+        "validators": [
+          { "type": "required", "message": "Username is required." },
+          { "type": "minlength", "value": 6, "message": "Username must be at least 6 characters long." }
+        ]
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "email",
+        "validators": [
+          { "type": "required", "message": "Email is required." },
+          { "type": "email", "message": "Please enter a valid email address." }
+        ]
+      },
+      {
+        "name": "mobileNumber",
+        "label": "Mobile Number",
+        "type": "tel",
+        "validators": [
+          { "type": "required", "message": "Mobile Number is required." },
+          { "type": "pattern", "value": "^[0-9]{10}$", "message": "Please enter a valid 10-digit mobile number." }
+        ]
+      },
+      {
+        "name": "password",
+        "label": "Password",
+        "type": "password",
+        "validators": [
+          { "type": "required", "message": "Password is required." },
+          { "type": "minlength", "value": 8, "message": "Password must be at least 8 characters long." }
+        ]
+      },
+      {
+        "name": "confirmPassword",
+        "label": "Confirm Password",
+        "type": "password",
+        "validators": [
+          { "type": "required", "message": "Confirm Password is required." },
+          { "type": "match", "field": "password", "message": "Passwords must match." }
+        ]
+      }
+    ]
+  }
+  

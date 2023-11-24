@@ -1,0 +1,12 @@
+.dashboard {
+    padding: 20px;
+  }
+  
+  .product-card {
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  mat-card-actions button {
+    margin-bottom: 10px;
+  }

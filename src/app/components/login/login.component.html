@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login and Register Form</title>
+    <!-- <style>
+        div {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .container {
+            margin-bottom: 20px;
+        }
+
+        div.error {
+            color: red;
+            margin-top: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[disabled] {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        button.mat-button {
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style> -->
+</head>
+<body>
+    <div>
+        <h2>ShopHub Access</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="container">
+                <label for="username">Username</label>
+                <input type="text" id="username" formControlName="username">
+                <div class="error" *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched">
+                    Username is required.
+                </div>
+                <div class="error" *ngIf="loginForm.get('username')?.hasError('alphabetsOnly')">
+                    {{ loginForm.get('username')?.getError('alphabetsOnly') }}
+                </div>
+            </div>
+            <div class="container">
+                <label for="password">Password</label>
+                <input type="password" id="password" formControlName="password">
+                <div class="error" *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
+                    Password is required.
+                </div>
+                <div class="error" *ngIf="loginForm.get('password')?.hasError('invalidPassword')">
+                    Password must contain at least one uppercase letter.
+                </div>
+                <div class="error" *ngIf="loginForm.get('password')?.hasError('minLength')">
+                    Password must be at least 8 characters long.
+                </div>
+            </div>
+            <button type="submit" [disabled]="!loginForm.valid">Login</button>
+        </form>
+        <button class="mat-button" color="accent" routerLink="/register">Register</button>
+    </div>
+</body>
+</html>
